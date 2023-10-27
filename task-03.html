@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 3</title>
+    <style>
+      
+      h1 {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      form {
+        margin-top: 16px;
+        border: 1px solid black;
+        padding: 16px;
+      }
+
+      .form-errors {
+        background-color: lightcoral;
+        border-color: red;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <p><a href="index.html">Go back</a></p>
+
+    <h1>Submit form</h1>
+
+    <div id="container">
+      <form name="login" id="loginForm">
+        <h1>Register</h1>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          class="form-control"
+          placeholder="Enter your username..."
+        />
+
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="form-control"
+          placeholder="Enter your password..."
+        />
+
+        <button type="submit">Submit</button>
+        <span class="form-errors"></span>
+      </form>
+    </div>
+
+    <script src="js/task-03.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 4</title>
+    <style>
+      h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 40px;  /* aici e in plus */
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: sans-serif;
+        height: 100vh;
+        padding-top: 50px;
+        position: relative;
+      }
+
+      body.open {
+        overflow-y: hidden;
+      }
+
+      body.open>.modal-window,
+      body.open>.overlay {
+        display: block;
+      }
+
+      .theme {
+        color: lime;
+        background-color: #000;
+        border: 3px solid lime;
+        border-radius: 15px;
+      }
+
+      .open-modal-btn {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 15px;
+        font-size: 50px;
+        cursor: pointer;
+        outline: none;
+      }
+
+      .modal-window {
+        font-size: 70px;
+        padding: 100px 90px;
+        text-transform: uppercase;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+        display: none;
+      }
+
+      .close-btn {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: lime;
+        text-decoration: underline;
+        cursor: pointer;
+        font-size: 25px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <p><a href="index.html">Go back</a></p>
+
+    <h1>Modal window</h1>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="modal-window theme" id="modalWindow">
+      <p>this is modal</p>
+      <button class="close-btn" id="closeBtn">close</button>
+    </div>
+
+    <button class="open-modal-btn theme" id="openModalBtn">Open modal</button>
+
+    <script src="js/task-04.js" type="module"></script>
+  </body>
+</html>
